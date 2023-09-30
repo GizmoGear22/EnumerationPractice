@@ -1,0 +1,15 @@
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\bin\Debug\net6.0\EnumerationPractice.exe
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\bin\Debug\net6.0\EnumerationPractice.deps.json
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\bin\Debug\net6.0\EnumerationPractice.runtimeconfig.json
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\bin\Debug\net6.0\EnumerationPractice.dll
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\bin\Debug\net6.0\EnumerationPractice.pdb
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.csproj.AssemblyReference.cache
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.AssemblyInfoInputs.cache
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.AssemblyInfo.cs
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.csproj.CoreCompileInputs.cache
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.dll
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\refint\EnumerationPractice.dll
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.pdb
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\EnumerationPractice.genruntimeconfig.cache
+C:\Users\13134\source\repos\EnumerationPractice\EnumerationPractice\obj\Debug\net6.0\ref\EnumerationPractice.dll
