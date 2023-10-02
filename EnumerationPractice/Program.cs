@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Reflection.Metadata.Ecma335;
+using System.Security.Cryptography.X509Certificates;
 
 namespace EnumerationPractice
 {
@@ -10,6 +12,7 @@ namespace EnumerationPractice
         {
             Strength,
             Agility,
+            Resilience,
             Perception
 
         }
@@ -18,42 +21,65 @@ namespace EnumerationPractice
         {
             public int Strength { get; set; }
             public int Agility { get; set; }
+            public int Resilience { get; set; }
             public int Perception { get; set; }
+            
 
-           
-            public void AssignStat(StatType type, string UserAssign)
+            public int StatCheck(string UserAssignedValue, int PointsAvailable)
             {
-                var StringToInt = Convert.ToInt32(UserAssign);
+                var TryParse = Int32.TryParse(UserAssignedValue, out var StringToInt);
+                if (!TryParse || StringToInt < 0)
+                {
+                    Console.WriteLine("Put in a proper value you moron!");
+                    var NewValue = Console.ReadLine();
+                    StatCheck(NewValue, PointsAvailable);
+                }
+                return StringToInt;
+            }
+
+            public void AssignStat(StatType type, string UserAssign, int AvailablePoints)
+            {
+                var UserInputValue = StatCheck(UserAssign, AvailablePoints);
+
                 switch (type)
                 {
                     case StatType.Strength:
-                        Strength = StringToInt;
+                        Strength = UserInputValue;
                         break;
                     case StatType.Agility:
-                        Agility = StringToInt;
+                        Agility = UserInputValue;
+                        break;
+                    case StatType.Resilience:
+                        Resilience = UserInputValue;
                         break;
                     case StatType.Perception:
-                        Perception = StringToInt;
+                        Perception = UserInputValue;
                         break;
 
                 }
+
+                AvailablePoints -= UserInputValue;
+                Console.WriteLine($"Points left: {AvailablePoints}");
             }
         }
         static void Main(string[] args)
         {
             
             Stat stat = new Stat();
+            int AvailablePoints = 30;
 
             Console.WriteLine("Assign Strength: ");
-            var AssignStrength = Console.ReadLine();
+            var AssignStrengthPoints = Console.ReadLine();
+            stat.AssignStat(StatType.Strength, AssignStrengthPoints, AvailablePoints);
             Console.WriteLine("Assign Agility: ");
-            var AssignAgility = Console.ReadLine();
+            var AssignAgilityPoints = Console.ReadLine();
+            stat.AssignStat(StatType.Agility, AssignAgilityPoints, AvailablePoints);
             Console.WriteLine("Assign Perception: ");
-            var AssignPerception = Console.ReadLine();
-
-            stat.AssignStat(StatType.Strength, AssignStrength);
-            stat.AssignStat(StatType.Agility, AssignAgility);
-            stat.AssignStat(StatType.Perception, AssignPerception);
+            var AssignResiliencePoints = Console.ReadLine();
+            stat.AssignStat(StatType.Resilience, AssignResiliencePoints, AvailablePoints);
+            Console.WriteLine("Assign Perception: ");
+            var AssignPerceptionPoints = Console.ReadLine();
+            stat.AssignStat(StatType.Perception, AssignPerceptionPoints, AvailablePoints);
 
             Console.WriteLine(stat.Strength.ToString());
             Console.WriteLine(stat.Agility.ToString());
